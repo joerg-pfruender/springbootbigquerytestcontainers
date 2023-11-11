@@ -51,6 +51,19 @@
       <version>2.25.0</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.11.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>gcloud</artifactId>
+      <version>1.19.1</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
   <dependencyManagement>
     <dependencies>

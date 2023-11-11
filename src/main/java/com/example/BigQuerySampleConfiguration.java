@@ -35,7 +35,8 @@ import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.handler.annotation.Header;
 
 /**
- * Sample configuration for using BigQuery with Spring Integration.
+ * copied from
+ * https://github.com/GoogleCloudPlatform/spring-cloud-gcp/blob/main/spring-cloud-gcp-samples/spring-cloud-gcp-bigquery-sample/src/main/java/com/example/BigQuerySampleConfiguration.java
  */
 @Configuration
 public class BigQuerySampleConfiguration {

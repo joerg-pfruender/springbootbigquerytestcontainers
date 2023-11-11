@@ -20,7 +20,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Sample application demonstrating loading data into BigQuery using Spring Integration.
+ * copied from
+ * https://github.com/GoogleCloudPlatform/spring-cloud-gcp/blob/main/spring-cloud-gcp-samples/spring-cloud-gcp-bigquery-sample/src/main/java/com/example/BigQuerySampleApplication.java
  */
 @SpringBootApplication
 public class BigQuerySampleApplication {

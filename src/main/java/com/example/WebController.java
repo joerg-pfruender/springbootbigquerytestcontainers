@@ -39,7 +39,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Provides REST endpoint allowing you to load data files to BigQuery using Spring Integration.
+ * copied from
+ * https://github.com/GoogleCloudPlatform/spring-cloud-gcp/blob/main/spring-cloud-gcp-samples/spring-cloud-gcp-bigquery-sample/src/main/java/com/example/WebController.java
  */
 @Controller
 public class WebController {
@@ -97,7 +98,7 @@ public class WebController {
     return getWriteApiResponse(writeApiRes, tableName);
   }
 
-  private Schema getDefaultSchema() {
+  public static Schema getDefaultSchema() {
     return Schema.of(
             Field.of("CompanyName", StandardSQLTypeName.STRING),
             Field.of("Description", StandardSQLTypeName.STRING),
