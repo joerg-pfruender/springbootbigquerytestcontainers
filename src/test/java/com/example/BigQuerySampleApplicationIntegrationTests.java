@@ -16,7 +16,7 @@
 
 package com.example;
 
-import com.example.config.GcpConfigurationProperties;
+import com.example.config.GcpTestConfiguration;
 import com.example.initializer.BigQueryInitializer;
 import com.google.cloud.bigquery.*;
 import com.google.cloud.spring.bigquery.core.BigQueryTemplate;
@@ -24,11 +24,9 @@ import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -50,10 +48,10 @@ import static org.assertj.core.api.Assertions.assertThat;
         classes = BigQuerySampleApplication.class,
         properties = "spring.cloud.gcp.bigquery.datasetName=test_dataset")
 @ActiveProfiles("test")
-@ContextConfiguration(initializers = BigQueryInitializer.class, classes = GcpConfigurationProperties.class)
+@ContextConfiguration(initializers = BigQueryInitializer.class, classes = GcpTestConfiguration.class)
 class BigQuerySampleApplicationIntegrationTests {
 
-  private static final String DATASET_NAME = GcpConfigurationProperties.DATASET_NAME;
+  private static final String DATASET_NAME = GcpTestConfiguration.DATASET_NAME;
 
   private static final String TABLE_NAME_PREFIX = "bigquery_sample_test_table";
 
