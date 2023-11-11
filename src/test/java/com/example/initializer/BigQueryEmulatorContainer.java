@@ -34,7 +34,7 @@ public class BigQueryEmulatorContainer extends GenericContainer<BigQueryEmulator
         addFixedExposedPort(grpcPort, grpcPort);
     }
 
-    public String getEmulatorhttpHostAndPort() {
+    public String getEmulatorHttpEndpoint() {
         return String.format("http://%s:%d", getHost(), httpPort);
     }
 
